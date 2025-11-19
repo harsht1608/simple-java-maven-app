@@ -2,7 +2,7 @@
 set -e
 
 echo "Running Maven Install..."
-mvn -B -DskipTests clean package
+mvn clean
 
 echo "Evaluating project name..."
 NAME=$(mvn -q -DforceStdout help:evaluate -Dexpression=project.name)
