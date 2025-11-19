@@ -25,5 +25,9 @@ pipeline {
         //         sh './jenkins/scripts/deliver.sh'
         //     }
         // }
+    post {
+        success {
+            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+        }
     }
 }
