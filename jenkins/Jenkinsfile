@@ -10,7 +10,7 @@ pipeline {
         stage('Upload Artifact to S3') {
             steps {
                 sh '''
-                    WAR_FILE=target/my-app.war
+                    WAR_FILE=/opt/homebrew/opt/tomcat/libexec/webapps/my-app.war
                     BUCKET=harsh-s3-maven-bucket1q2w3e4r
                     
                     echo "Uploading $WAR_FILE to S3 bucket $BUCKET"
